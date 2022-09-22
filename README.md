@@ -71,6 +71,12 @@ Clone the Repository in your Local. Update Maven. Go to DemoApplication.java cla
 <li> User cannot delete the Customer if it is assigned to a Contract and Vice Versa.</li>
 </ul>
 
+# Swagger URLs
+<ul>
+	<li>http://localhost:8080/swagger-ui.html#</li>
+	<li>http://localhost:8080/v2/api-docs</li>
+</ul>
+
 # Packages & Class Details
 
 <h2>src/main/java</h2>
