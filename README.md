@@ -12,6 +12,7 @@ This Project has the Code for a Leasing Contract. The user can lease a Contract.
 <ul>
   <li>allanedb</li>
 </ul> 
+
 # Tables
 <ul>
   <li>Customer</li>
@@ -44,13 +45,175 @@ This Project has the Code for a Leasing Contract. The user can lease a Contract.
 # Rest APIs
 
 # Vehicle
+
+<h3> Save Vehicle Data</h3>
 <ul>
   <li>Method: POST</li>
   <li>API End Point: "http://localhost:8080/vehicle/save"</li>
-  <li>{
+  <li>Request payoad: {
 	"brand":"BMW",
 	"model":"abc",
 	"year":2022,
 	"price":128889
 	}</li>
+  </ul>
+  
+<h3> Get Vehicle Data</h3>
+<ul>
+  <li>Method: GET</li>
+  <li>API End Point: "http://localhost:8080/vehicle/get/{vin}"</li>
+  <li>Response Payload:{
+	"vin":"2222",
+	"brand":"BMW",
+	"model":"abc",
+	"year":2022,
+	"price":128889
+	}</li>
+  </ul>
+  
+  <h3>Update Vehicle Data</h3>
+<ul>
+  <li>Method: PUT</li>
+  <li>API End Point: "http://localhost:8080/vehicle/update"</li>
+  <li>Request Payload:{
+	"vin":"2222",
+	"brand":"BMW",
+	"model":"X5",
+	"year":2022,
+	"price":128889
+	}</li>
+  </ul>
+  
+  <h3> Delete Vehicle Data</h3>
+<ul>
+  <li>Method: DELETE</li>
+  <li>API End Point: "http://localhost:8080/vehicle/delete/{vin}"</li>
+  </ul>
+
+
+# Customer
+
+<h3> Save Customer Data</h3>
+<ul>
+  <li>Method: POST</li>
+  <li>API End Point: "http://localhost:8080/customer/save"</li>
+  <li>Request payoad: {
+"firstName": "Charles",
+    "lastName": "Elvis",
+    "dob": "2022-01-01"
+	}</li>
+  </ul>
+  
+<h3> Get Customer Data</h3>
+<ul>
+  <li>Method: GET</li>
+  <li>API End Point: "http://localhost:8080/customer/get/{vin}"</li>
+  <li>Response Payload:{
+	  "id":1,
+"firstName": "Charles",
+    "lastName": "Elvis",
+    "dob": "2022-01-01"
+	}</li>
+  </ul>
+  
+  <h3>Update Customer Data</h3>
+<ul>
+  <li>Method: PUT</li>
+  <li>API End Point: "http://localhost:8080/customer/update"</li>
+  <li>Request Payload:{
+	  "id":1,
+"firstName": "Charles",
+    "lastName": "Elvis",
+    "dob": "2022-01-01"
+	}}</li>
+  </ul>
+  
+  <h3> Delete Vehicle Data</h3>
+<ul>
+  <li>Method: DELETE</li>
+  <li>API End Point: "http://localhost:8080/customer/delete/{id}"</li>
+  </ul>
+  
+# Contract
+
+  <h3> Get All Contract Details</h3>
+<ul>
+  <li>Method: GET</li>
+  <li>API End Point: "http://localhost:8080/contract/getAllContracts"</li>
+<li> Gets all the Contract Details</li>
+  </ul>
+
+<h3> Save Contract Data</h3>
+<ul>
+  <li>Method: POST</li>
+  <li>API End Point: "http://localhost:8080/contract/save"</li>
+  <li>Request payoad: {
+	"contractNumber":11111,
+	"monthlyRate":12.2,
+	"vehicle":{
+	"vin":2,
+	"brand":"BMW",
+	"model":"abc",
+	"year":2022,
+	"price":128889
+	},
+	"customer":{
+    "id": 1,
+    "firstName": "Charles",
+    "lastName": "Elvis",
+    "dob": "2022-01-01"
+}
+}</li>
+  </ul>
+  
+<h3> Get Contract Data</h3>
+<ul>
+  <li>Method: GET</li>
+  <li>API End Point: "http://localhost:8080/contract/get/{vin}"</li>
+  <li>Response Payload:{
+	"contractNumber":11111,
+	"monthlyRate":12.2,
+	"vehicle":{
+	"vin":2,
+	"brand":"BMW",
+	"model":"abc",
+	"year":2022,
+	"price":128889
+	},
+	"customer":{
+    "id": 1,
+    "firstName": "Charles",
+    "lastName": "Elvis",
+    "dob": "2022-01-01"
+}
+}</li>
+  </ul>
+  
+  <h3>Update Contract Data</h3>
+<ul>
+  <li>Method: PUT</li>
+  <li>API End Point: "http://localhost:8080/contract/update"</li>
+  <li>Request Payload:{
+	"contractNumber":11111,
+	"monthlyRate":12.2,
+	"vehicle":{
+	"vin":2,
+	"brand":"BMW",
+	"model":"abc",
+	"year":2022,
+	"price":128889
+	},
+	"customer":{
+    "id": 1,
+    "firstName": "Charles",
+    "lastName": "Elvis",
+    "dob": "2022-01-01"
+}
+}</li>
+  </ul>
+  
+  <h3> Delete Contract Data</h3>
+<ul>
+  <li>Method: DELETE</li>
+  <li>API End Point: "http://localhost:8080/contract/delete/{id}"</li>
   </ul>
