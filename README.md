@@ -71,7 +71,7 @@ Clone the Repository in your Local. Update Maven. Go to DemoApplication.java cla
 <li> User cannot delete the Customer if it is assigned to a Contract and Vice Versa.</li>
 </ul>
 
-# Packages
+# Packages & Class Details
 
 <h2>src/main/java</h2>
 <ul>
