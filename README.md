@@ -68,6 +68,141 @@ This Project has the Code for a Leasing Contract. The user can lease a Contract.
 <li> User cannot delete the Customer if it is assigned to a Contract and Vice Versa.</li>
 </ul>
 
+# Packages
+
+<h2>src/main/java</h2>
+<ul>
+	<li>com.allane.contract</li>
+	<ul>
+	<li>DemoApplication.java: Has the Main Method to Execute the Application.</li>
+</ul>
+</ul>
+<ul>
+	<li>com.allane.contract.controller</li>
+	<ul>
+	<li>ContractController.java: Controller class for Contract.</li>
+		<li>CustomerController.java: Controller class for Customer.</li>
+		<li>VehicleController.java: Controller class for Vehicle.</li>
+</ul>
+</ul>
+<ul>
+	<li>com.allane.contract.entity</li>
+	<ul>
+	<li>Contract.java: Entity class for Contract.</li>
+		<li>Customer.java: Entity class for Customer.</li>
+		<li>Vehicle.java: Entity class for Vehicle.</li>
+</ul>
+</ul>
+<ul>
+	<li>com.allane.contract.repository</li>
+	<ul>
+	<li>ContractRepository.java: Repository class for Contract.</li>
+		<li>CustomerRepository.java: Repository class for Customer.</li>
+		<li>VehicleRepository.java: Repository class for Vehicle.</li>
+</ul>
+</ul>
+
+<ul>
+	<li>com.allane.contract.service</li>
+	<ul>
+	<li>ContractService.java: Service Interface for Contract.</li>
+		<li>CustomerService.java: Service Interface for Customer.</li>
+		<li>VehicleService.java: Service Interface for Vehicle.</li>
+</ul>
+</ul>
+
+<ul>
+	<li>com.allane.contract.service.impl</li>
+	<ul>
+	<li>ContractRepository.java: Service Implementation class for Contract.</li>
+		<li>CustomerRepository.java: Service Implementation class for Customer.</li>
+		<li>VehicleRepository.java: Service Implementation class for Vehicle.</li>
+</ul>
+</ul>
+
+<ul>
+	<li>com.allane.contract.validations</li>
+	<ul>
+	<li>Constants.java: File having all the constants.</li>
+		<li>GenericValidations.java: Generic Validations like not empty, having spl charecters, having numbers, length greater than 64, price/year non Negative.</li>
+		<li>ContractValidations.java: Validations of Vehicle.</li>
+		<li>CustomerValidations.java: Validations of Customer.</li>
+		<li>VehicleValidations.java:  Validations of Vehicle.</li>
+</ul>
+</ul>
+
+<ul>
+	<li>com.allane.contract.exceptions</li>
+	<ul>
+	<li>GlobalExceptionHandler.java: Handling Exceptions Globally.</li>
+	<li>BusinessException.java: Business Exceptions.</li>
+	<li>EmptyFieldException.java: Empty Field Exceptions.</li>
+	</ul>
+</ul>
+
+
+<ul>
+	<li>com.allane.contract.dto</li>
+	<ul>
+	<li>ContractDetailsFormDTO.java: Contract Details Form DTO.</li>
+	<li>ContractOverviewDTO.java: Contract Overview of DTO.</li>
+	<li>DropdownDTO.java: Dropdown DTO.</li>
+	<li>ErrorDetails.java: Error Details DTO.</li>
+	<li>ErrorResponse.java: Error Response of DTO.</li>
+	<li>Response.java: Response of DTO.</li>
+	</ul>
+</ul>
+
+<h2>src/test/java</h2>
+
+<ul>
+	<li>com.allane.contract</li>
+	<ul>
+	<li>CustomerControllerTest.java: Unit Test Cases of Customer Controller.</li>
+	<li>DemoApplicationTests.java: Unit Test Cases of Contract Controller.</li>
+	<li>VehicleControllerTest.java: Unit Test Cases of Vehicle Controller.</li>
+	</ul>
+</ul>
+
+# APIs Implemented
+
+<h2>Vehicle</h2>
+<ul>
+	<li>"http://localhost:8080/vehicle/save", Method: POST, Description:Save Vehicle data by providing payload.</li>
+	<li>"http://localhost:8080/vehicle/get/{vin}", Method: GET, Description:Get Vehicle data by providing Id in the URL.</li>
+	<li>"http://localhost:8080/vehicle/update/{id}", Method: PUT, Description:Update Vehicle data by providing payload and the vin in the URL.</li>
+	<li>"http://localhost:8080/vehicle/delete/{id}", Method: DELETE, Description:Delete Vehicle data by providing Id in the URL.</li>	
+	<li>"http://localhost:8080/vehicle/getAll", Method: GET, Description: Get the whole Vehicle Data.</li>
+	<li>"http://localhost:8080/vehicle/delete", Method: DELETE, Description:Delete the wholeVehicle data.</li>
+</ul>
+
+<h2>Customer</h2>
+<ul>
+	<li>"http://localhost:8080/customer/save", Method: POST, Description:Save Customer data by providing payload.</li>
+	<li>"http://localhost:8080/customer/get/{vin}", Method: GET, Description:Get Customer data by providing Id in the URL.</li>
+	<li>"http://localhost:8080/customer/update/{id}", Method: PUT, Description:Update Customer data by providing payload and the id in the URL.</li>
+	<li>"http://localhost:8080/customer/delete/{id}", Method: DELETE, Description:Delete Customer data by providing Id in the URL.</li>	
+	<li>"http://localhost:8080/customer/getAll", Method: GET, Description: Get the whole Customer Data.</li>
+	<li>"http://localhost:8080/customer/delete", Method: DELETE, Description:Delete the whole Customer data.</li>
+</ul>
+
+<h2>Contract</h2>
+<ul>
+	<li>"http://localhost:8080/contract/save", Method: POST, Description:Save Contract data by providing payload.</li>
+	<li>"http://localhost:8080/contract/get/{vin}", Method: GET, Description:Get Contract data by providing Id in the URL.</li>
+	<li>"http://localhost:8080/contract/update/{id}", Method: PUT, Description:Update Contract data by providing payload and the Contract Number in the URL.</li>
+	<li>"http://localhost:8080/contract/delete/{id}", Method: DELETE, Description:Delete Contract data by providing Id in the URL.</li>	
+	<li>"http://localhost:8080/contract/getDropdownDetails", Method: GET, Description: Gets the Customer and Vehicle Dropdown data.</li>
+	<li>"http://localhost:8080/contract//unMapCustomer/{id}", Method: DELETE, Description: Un maps Customer from the contract.</li>
+	<li>"http://localhost:8080/contract//unMapVehicle/{id}", Method: DELETE, Description: Un maps Vehicle from the contract.</li>
+	<li>"http://localhost:8080/contract/getAll", Method: GET, Description: Get the whole Contract Data.</li>
+	<li>"http://localhost:8080/contract/delete", Method: DELETE, Description:Delete the whole Contract data.</li>
+</ul>
+
+# LOG Files
+
+log.txt file: Contains the APplication cost.
+
 # Rest APIs
 
 # Vehicle
