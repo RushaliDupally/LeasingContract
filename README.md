@@ -8,6 +8,9 @@ This Project has the Code for a Leasing Contract. The user can lease a Contract.
 4. Spring Boot
 5. HIbernate
 
+# Execution Comments
+Clone the Repository in your Local. Update Maven. Go to DemoApplication.java class of com.allane.contract package. Right Click and Run as Spring Boot Application.
+
 # Database
 <ul>
   <li>allanedb</li>
