@@ -42,6 +42,32 @@ This Project has the Code for a Leasing Contract. The user can lease a Contract.
 </ul> 
 </ul>
 
+# Hibernate Mappings
+<ul>
+	<li> One-to-One Mapping between Contract and Vehicle Table</li>
+	<li> Many-to-One Mapping between Contract and Customer Table</li>
+</ul>
+
+# Validations Implemented
+<ul>
+<li> Cannot be empty, cannot contain numbers, special charecters and length shouldnot br greater than 64 Characters. Implemented On:
+	<ul>
+		<li>Customer: first Name</li>
+		<li>Customer: Last Name</li>
+		<li>Vehicle: Brand Name</li>
+		<li>Vehicle: Model Name</li>
+	</ul>
+</li>
+</ul>
+
+<ul>
+<li> Vehicle price, Vehicle year and Contract Montly Rate cannot be Negative.</li>
+<li> Vehicle Year length should not be more than 4.</li>
+<li> Valid Date of Birth.</li>
+<li> User cannot delete the Vehicle if it is assigned to a Contract and Vice Versa.</li>
+<li> User cannot delete the Customer if it is assigned to a Contract and Vice Versa.</li>
+</ul>
+
 # Rest APIs
 
 # Vehicle
