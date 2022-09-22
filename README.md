@@ -73,7 +73,7 @@ Clone the Repository in your Local. Update Maven. Go to DemoApplication.java cla
 
 # Swagger URLs
 <ul>
-	<li>http://localhost:8080/swagger-ui.html#</li>
+	<li>http://localhost:8080/swagger-ui.html</li>
 	<li>http://localhost:8080/v2/api-docs</li>
 </ul>
 
